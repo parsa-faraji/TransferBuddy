@@ -1,0 +1,185 @@
+{
+  "majors": [
+    {
+      "id": "cs-ucb",
+      "major": "Computer Science",
+      "school": "UC Berkeley",
+      "courses": [
+        {
+          "ucbCourse": "CS 61A",
+          "equivalents": {
+            "BCC": "CIS 5",
+            "Laney": "CIS 25",
+            "Merritt": null,
+            "CoA": "CIS 25"
+          }
+        },
+        {
+          "ucbCourse": "CS 61B",
+          "equivalents": {
+            "BCC": "CIS 22",
+            "Laney": "CIS 26",
+            "Merritt": null,
+            "CoA": "CIS 26"
+          }
+        },
+        {
+          "ucbCourse": "CS 70",
+          "equivalents": {
+            "BCC": null,
+            "Laney": null,
+            "Merritt": null,
+            "CoA": null
+          }
+        },
+        {
+          "ucbCourse": "Math 1A",
+          "equivalents": {
+            "BCC": "MATH 3A",
+            "Laney": "MATH 3A",
+            "Merritt": "MATH 3A",
+            "CoA": "MATH 3A"
+          }
+        },
+        {
+          "ucbCourse": "Math 1B",
+          "equivalents": {
+            "BCC": "MATH 3B",
+            "Laney": "MATH 3B",
+            "Merritt": "MATH 3B",
+            "CoA": "MATH 3B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ds-ucb",
+      "major": "Data Science",
+      "school": "UC Berkeley",
+      "courses": [
+        {
+          "ucbCourse": "Data C8",
+          "equivalents": {
+            "BCC": "CIS 26 + Math 13",
+            "Laney": "CIS 25 + MATH 13",
+            "Merritt": null,
+            "CoA": null
+          }
+        },
+        {
+          "ucbCourse": "Math 1A",
+          "equivalents": {
+            "BCC": "MATH 3A",
+            "Laney": "MATH 3A",
+            "Merritt": "MATH 3A",
+            "CoA": "MATH 3A"
+          }
+        },
+        {
+          "ucbCourse": "Math 1B",
+          "equivalents": {
+            "BCC": "MATH 3B",
+            "Laney": "MATH 3B",
+            "Merritt": "MATH 3B",
+            "CoA": "MATH 3B"
+          }
+        },
+        {
+          "ucbCourse": "STAT 20",
+          "equivalents": {
+            "BCC": null,
+            "Laney": "MATH 13",
+            "Merritt": null,
+            "CoA": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "bus-ucb",
+      "major": "Business Administration",
+      "school": "UC Berkeley",
+      "courses": [
+        {
+          "ucbCourse": "UGBA 10",
+          "equivalents": {
+            "BCC": "BUS 10",
+            "Laney": "BUS 10",
+            "Merritt": "BUS 10",
+            "CoA": "BUS 10"
+          }
+        },
+        {
+          "ucbCourse": "Econ 1",
+          "equivalents": {
+            "BCC": "ECON 1",
+            "Laney": "ECON 1",
+            "Merritt": "ECON 1",
+            "CoA": "ECON 1"
+          }
+        },
+        {
+          "ucbCourse": "Math 16A",
+          "equivalents": {
+            "BCC": "MATH 13",
+            "Laney": "MATH 13",
+            "Merritt": "MATH 13",
+            "CoA": "MATH 13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mcb-ucb",
+      "major": "Molecular & Cell Biology",
+      "school": "UC Berkeley",
+      "courses": [
+        {
+          "ucbCourse": "BIO 1A/1AL",
+          "equivalents": {
+            "BCC": "BIOL 1A + 1AL",
+            "Laney": "BIOL 1A + 1AL",
+            "Merritt": "BIOL 1A + 1AL",
+            "CoA": "BIOL 1A + 1AL"
+          }
+        },
+        {
+          "ucbCourse": "BIO 1B",
+          "equivalents": {
+            "BCC": "BIOL 1B",
+            "Laney": "BIOL 1B",
+            "Merritt": "BIOL 1B",
+            "CoA": "BIOL 1B"
+          }
+        },
+        {
+          "ucbCourse": "Chem 1A/1AL",
+          "equivalents": {
+            "BCC": "CHEM 1A + 1AL",
+            "Laney": "CHEM 1A + 1AL",
+            "Merritt": "CHEM 1A + 1AL",
+            "CoA": "CHEM 1A + 1AL"
+          }
+        },
+        {
+          "ucbCourse": "Chem 1B",
+          "equivalents": {
+            "BCC": "CHEM 1B",
+            "Laney": "CHEM 1B",
+            "Merritt": "CHEM 1B",
+            "CoA": "CHEM 1B"
+          }
+        },
+        {
+          "ucbCourse": "Math 1A",
+          "equivalents": {
+            "BCC": "MATH 3A",
+            "Laney": "MATH 3A",
+            "Merritt": "MATH 3A",
+            "CoA": "MATH 3A"
+          }
+        }
+      ]
+    }
+  ]
+}
