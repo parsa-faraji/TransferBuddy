@@ -115,6 +115,162 @@ app.get('/api/progress/:majorId', (req, res) => {
   });
 });
 
+// AI Advisor endpoint
+app.post('/api/ai-advice', (req, res) => {
+  const { majorId, completedCourses, message, type } = req.body;
+  
+  // Mock AI responses for demonstration
+  const responses = {
+    initial: [
+      "Welcome! I'm your AI academic advisor. Based on your major selection, I can help you prioritize your remaining courses and optimize your transfer timeline.",
+      "Great choice on your major! I see you've completed some courses already. Let me help you plan the most efficient path to transfer.",
+      "Hello! I'm here to provide personalized academic guidance based on your progress and goals. What would you like to know about your transfer journey?"
+    ],
+    chat: [
+      "That's an excellent question! Based on similar students' experiences, I'd recommend focusing on prerequisite courses first.",
+      "I can help with that! Many successful transfer students have found that taking these courses in sequence works best.",
+      "Great question! Here's my analysis of your situation and some actionable recommendations.",
+      "Based on your current progress, I'd suggest prioritizing courses that are required by multiple UC campuses.",
+      "That's a smart approach! Let me share some insights from successful transfer patterns I've observed."
+    ]
+  };
+
+  const advice = type === 'initial' 
+    ? responses.initial[Math.floor(Math.random() * responses.initial.length)]
+    : responses.chat[Math.floor(Math.random() * responses.chat.length)];
+
+  res.json({ advice });
+});
+
+// Mentors endpoint
+app.get('/api/mentors', (req, res) => {
+  const mentors = [
+    { 
+      id: '1', 
+      name: 'Sarah Chen', 
+      major: 'Computer Science', 
+      year: 'Senior', 
+      university: 'UC Berkeley',
+      online: true,
+      rating: 4.9,
+      specialties: ['Transfer Planning', 'STEM Courses']
+    },
+    { 
+      id: '2', 
+      name: 'Marcus Johnson', 
+      major: 'Business Administration', 
+      year: 'Junior', 
+      university: 'UCLA',
+      online: false,
+      rating: 4.7,
+      specialties: ['Business Programs', 'Internships']
+    },
+    { 
+      id: '3', 
+      name: 'Elena Rodriguez', 
+      major: 'Biology', 
+      year: 'Graduate', 
+      university: 'UC San Diego',
+      online: true,
+      rating: 4.8,
+      specialties: ['Pre-med', 'Research']
+    }
+  ];
+  
+  res.json({ mentors });
+});
+
+// Community Chat endpoints
+app.get('/api/community/:channelId/messages', (req, res) => {
+  const { channelId } = req.params;
+  
+  const mockMessages = [
+    {
+      id: '1',
+      user: { 
+        name: 'Alex Rivera', 
+        avatar: 'https://ui-avatars.com/api/?name=Alex+Rivera&background=10b981&color=fff', 
+        major: 'Computer Science' 
+      },
+      message: 'Has anyone taken CS 61A at Berkeley? How was the transition from community college?',
+      timestamp: Date.now() - 3600000,
+      likes: 5,
+      replies: 3
+    },
+    {
+      id: '2',
+      user: { 
+        name: 'Maya Patel', 
+        avatar: 'https://ui-avatars.com/api/?name=Maya+Patel&background=f59e0b&color=fff', 
+        major: 'Biology' 
+      },
+      message: 'The key is to review discrete math and practice Python before starting. The jump is manageable if you prepare!',
+      timestamp: Date.now() - 3000000,
+      likes: 12,
+      replies: 1
+    }
+  ];
+  
+  res.json({ messages: mockMessages });
+});
+
+app.post('/api/community/:channelId/messages', (req, res) => {
+  const { channelId } = req.params;
+  const message = req.body;
+  
+  // In a real app, save to database
+  res.json({ success: true, message: 'Message posted successfully' });
+});
+
+// Class Resources endpoint
+app.get('/api/resources/:majorId', (req, res) => {
+  const { majorId } = req.params;
+  
+  const mockResources = [
+    {
+      id: '1',
+      title: 'CS 61A: Structure and Interpretation of Computer Programs',
+      description: 'Complete study guide with practice problems and solutions',
+      type: 'study-guide',
+      course: 'CS 61A',
+      downloads: 1523,
+      rating: 4.8,
+      author: 'Berkeley Study Group',
+      fileType: 'pdf',
+      size: '2.4 MB',
+      tags: ['python', 'recursion', 'higher-order-functions']
+    },
+    {
+      id: '2',
+      title: 'Calculus II Video Lecture Series',
+      description: 'In-depth video explanations of integration techniques and series',
+      type: 'video',
+      course: 'MATH 1B',
+      downloads: 892,
+      rating: 4.9,
+      author: 'Math Tutoring Center',
+      fileType: 'video',
+      duration: '12 hours',
+      tags: ['integration', 'series', 'applications']
+    },
+    {
+      id: '3',
+      title: 'Physics 7A Lab Reports & Data Analysis',
+      description: 'Sample lab reports with proper data analysis and error calculations',
+      type: 'lab-report',
+      course: 'PHYSICS 7A',
+      downloads: 634,
+      rating: 4.6,
+      author: 'Physics Study Circle',
+      fileType: 'docx',
+      size: '1.8 MB',
+      tags: ['mechanics', 'data-analysis', 'error-calculation']
+    }
+  ];
+  
+  res.json({ resources: mockResources });
+});
+
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
